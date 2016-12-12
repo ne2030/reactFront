@@ -1,0 +1,49 @@
+.profile > a {
+  margin-left: 20px;
+}
+.profile_btn {
+  margin-left: 12px;
+}
+.profile_container {
+  margin-top: 17px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.center_ {
+  padding-left: 22px;
+}
+.profile_img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 350px;
+}
+.profile_list {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 12px;
+  margin-left: 30px;
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.profile_list span {
+  color: #777;
+}
+.profile_list p:first-child {
+  font-size: 14px;
+  font-weight: bold;
+  color: #535353;
+}
+#add_stack {
+  float: right;
+}
+#stack_form {
+  margin-bottom: 5px;
+}
+#stack_form input {
+  margin-right: 3px;
+}
