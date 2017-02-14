@@ -6,6 +6,10 @@ import Dropdown from './dropdown/dropdown';
 import './nav.css';
 
 class Nav extends Component {
+  constructor(props) {
+    super(props);
+    
+  }
   render() {
     const contents = ['Action', 'Another action', 'Something else here', 'divider', 'Nav header', 'Seperated link', 'One more seperated link'];
     return (

@@ -99,7 +99,6 @@ class Stack extends Component {
               <th> Skill </th>
               <th> type </th>
               <th> Description </th>
-              <th> Mastery (%) </th>
             </tr>
           </thead>
           <tbody>
@@ -109,7 +108,6 @@ class Stack extends Component {
                   <td> {item.skill} </td>
                   <td> {item.type} </td>
                   <td> {item.description} </td>
-                  <td className="center_"> {item.mastery}% </td>
                 </tr>)) : ''}
           </tbody>
         </table>
