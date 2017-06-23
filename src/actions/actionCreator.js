@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 //Counter [increment, decrement, setDiff]
-const endPoint = 'http://eleclion.asia';
+const endPoint = 'https://13.124.17.73';
+// const endPoint = 'http://localhost:3002';
 
 
 export function increment() {
@@ -23,7 +24,7 @@ export function setDiff(value) {
   };
 }
 
-// Login [requestsLogin, receiveLogin, logOut]
+// Login [requestsLogin, receiveLogin, loginFail logOut]
 
 
 export function requestLogin() {
@@ -39,6 +40,13 @@ export function receiveLogin(data) {
     jwToken: data.jwToken,
     user: data.user
   };
+}
+
+export function failLogin(err) {
+    return {
+        type: "FAIL_LOGIN",
+        err: err.message
+    }
 }
 
 export function logOut() {
@@ -125,6 +133,9 @@ export function _login(id, pw) {
     return axios.post(endPoint + '/auth/login', user)
       .then(res => {
         dispatch(receiveLogin(res.data));
+      })
+      .catch(err => {
+          dispatch(failLogin(err.response.data));
       });
   };
 }

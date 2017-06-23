@@ -4,6 +4,7 @@ export const SET_DIFF = "SET_DIFF";
 
 export const REQUEST_LOGIN = "REQUEST_LOGIN";
 export const RECEIVE_LOGIN = "RECEIVE_LOGIN";
+export const FAIL_LOGIN = "FAIL_LOGIN";
 export const LOG_OUT = "LOG_OUT";
 
 export const REQUEST_STACK = "REQUEST_STACK";

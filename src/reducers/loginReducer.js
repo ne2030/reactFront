@@ -1,8 +1,8 @@
 import {
-  REQUEST_LOGIN, RECEIVE_LOGIN, LOG_OUT,
+  REQUEST_LOGIN, RECEIVE_LOGIN, LOG_OUT, FAIL_LOGIN
 } from '../actions/actionTypes.js';
 
-const loginInitialState = { onRequset: false, refreshToken: undefined, jwToken: undefined, user: undefined };
+const loginInitialState = { onRequest: false, refreshToken: undefined, jwToken: undefined, user: undefined, err: undefined };
 
 const login = (state = loginInitialState, action) => {
   switch(action.type) {
@@ -17,6 +17,11 @@ const login = (state = loginInitialState, action) => {
         jwToken: action.jwToken,
         user: action.user
       });
+    case FAIL_LOGIN:
+        return Object.assign({}, state, {
+            onRequest: false,
+            err: action.err
+        });
     case LOG_OUT:
       return Object.assign({}, state, {
         refreshToken: undefined,
